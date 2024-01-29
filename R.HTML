@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT REGISTRATION FORM</title>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby4HeZT8zj2mbf61LGOvqlfjsNo0uxVR8evtG4DS-xIOiH77dLu_Xl0in3ZD5rbxvOA/exec';
+        const form = document.getElementById('registrationForm');
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</head>
+<body bgcolor="blue">
+    
+        <form id="uploadForm" action="https://script.google.com/macros/s/AKfycby4HeZT8zj2mbf61LGOvqlfjsNo0uxVR8evtG4DS-xIOiH77dLu_Xl0in3ZD5rbxvOA/exec" method="POST">
+        <table cellpadding="5" bgcolor="black" align="center" style="margin-top: 140px;">
+            <tr>
+                <td colspan="2">
+                    <font color="white">STUDENT REGISTRATION FORM</font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Name :</font>
+                </td>
+                <td>
+                    <input type="text" name="name" size="20" placeholder="Enter the Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Father Name :</font>
+                </td>
+                <td>
+                    <input type="text" name="fatherName" size="20" placeholder="Enter the Father Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Postal Address :</font>
+                </td>
+                <td>
+                    <input type="text" name="postalAddress" size="20" placeholder="Enter the Postal Address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Gender :</font>
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="Male"><font color="white">Male
+                    <input type="radio" name="gender" value="Female"><font color="white">Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Course :</font>
+                </td>
+                <td>
+                    <select name="course">
+                        <option>Select</option>
+                        <option>MCA</option>
+                        <option>BCA</option>
+                        <option>MBA</option>
+                        <option>MSC.IT</option>
+                        <option>BSC.IT</option>
+                        <option>M.TECH</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Email Id :</font>
+                </td>
+                <td>
+                    <input type="text" name="email" size="20" placeholder="Enter the Email Id">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">DOB :</font>
+                </td>
+                <td>
+                    <input type="date" name="dob" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">Mobile n.o :</font>
+                </td>
+                <td>
+                    <input type="text" name="mobile" size="20" placeholder="Enter the Mobile n.o">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font color="white">License :</font>
+                </td>
+                <td>
+                    <input type="file" name="licenseFile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="Reset" value="Reset">
+                </td>
+                <td>
+                    <input type="Submit" value="Submit">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <font color="white">Download License: <a href="https://drive.google.com/file/d/1X7QohchZYPl3y8eUosoh014MatOWVTRf/view?usp=sharing" target="_blank" rel="noopener noreferrer">License (PDF)</a></font>
+                </td>
+            </tr>
+           
+        </table>
+    </form>
+</body>
+</html>
